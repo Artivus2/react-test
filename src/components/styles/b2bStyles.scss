@@ -1,0 +1,20 @@
+%card_b2b_layout {
+    box-sizing: border-box;
+    width:350px;
+    height: 525px;
+    border-radius: 30px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        border-image: linear-gradient(to right top, #FFF3A6, skyblue, #00674C);
+        border-radius: 34px;
+        z-index: -1;
+      }
+      
+    @media screen and (max-width: 1279px) {
+    }
+}

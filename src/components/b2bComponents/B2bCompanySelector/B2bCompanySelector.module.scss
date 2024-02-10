@@ -1,0 +1,52 @@
+@import "../../styles/colors.scss";
+
+.b2bCompanySelector {
+  display: inline-block;
+  position: relative;
+
+  .addCompanyButton {
+    position: absolute;
+    left: 100%;
+    top: 0;
+
+    width: 300px;
+
+    padding: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 24px;
+    opacity: 1;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.wrap {
+  position: absolute;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1279px) and (min-width: 719px) {
+  .b2bCompanySelector {
+    margin-top: -60px;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .b2bCompanySelector {
+    // width: 325px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 10px;
+    .addCompanyButton {
+      flex: 1;
+      position: static;
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}

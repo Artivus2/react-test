@@ -1,0 +1,192 @@
+@import "../../styles/colors.scss";
+
+.main {
+  display: none;
+  position: fixed;
+  z-index: 600;
+  top: 0;
+  background-color: $background;
+  background-image: url("../../../assets/img/bgMobile.png");
+  background-repeat: no-repeat;
+  background-position: right 90%;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid $details;
+  padding: 10px 0;
+}
+
+.burBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.active {
+  height: 100vh;
+}
+.contentProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.activeProfile {
+  height: 100vh;
+}
+
+.newBlock {
+  width: 26px;
+  height: 17px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $green;
+  color: $green;
+  font-size: 8px;
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  z-index: 2;
+}
+
+.newItem {
+  position: relative;
+  width: fit-content;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid $details;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation {
+  a {
+    text-decoration: none;
+  }
+  width: 100%;
+}
+
+.logBtn {
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  padding: 5px 10px;
+  color: $fillnout;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.loginBtn {
+  width: 100%;
+  background-color: $fillnout;
+  height: 40px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.exitBtn {
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid $fillnout;
+  border-radius: 8px;
+}
+
+.burgerBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.setProfile {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid $btnBlue;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.smallsidebar {
+  position: fixed;
+  left: -100%;
+  top: 86px !important;
+  height: 100vh !important;
+  transition: 1s;
+  z-index: 4;
+  @media (min-width: 1439px) {
+    display: none;
+  }
+}
+
+.sidebarActive {
+  position: fixed;
+  transition: 1s;
+  top: 86px;
+  left: 0px;
+  z-index: 4;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.openOffers {
+  min-width: 20px;
+  min-height: 10px;
+  background-color: $green;
+  border-radius: 100%;
+  padding: 3px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+}

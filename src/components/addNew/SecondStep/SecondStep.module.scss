@@ -1,0 +1,330 @@
+@import "../../styles/colors.scss";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  @media screen and (max-width: 719px) {
+    margin-bottom: 10px;
+  }
+}
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: $text;
+}
+
+.title2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-weight: 500;
+  color: $text;
+  gap: 5px;
+  img {
+    display: none;
+  }
+  span {
+    display: flex;
+    gap: 5px;
+    color: $fillnout;
+  }
+}
+
+.title3 {
+  margin-bottom: 5px;
+  color: #ffffff60;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mainInput {
+  height: 40px;
+  border: 2px solid $fillnout;
+  background-color: transparent;
+  padding: 10px 82px 10px 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  color: $text;
+  font-weight: 600;
+  font-size: 16px;
+  &::placeholder {
+    color: #ffffff60;
+  }
+  &Block {
+    position: relative;
+    margin: 10px 0;
+  }
+}
+
+.mainLabel,
+.mainLabel1 {
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  right: 10px;
+  color: $fillnout;
+  font-weight: 500;
+}
+.mainLabel1 {
+  right: 80px;
+  color: $fillnout;
+  cursor: pointer;
+}
+
+.limits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $fillnout;
+  gap: 5px;
+}
+
+.inputBlock {
+  position: relative;
+  flex: 1;
+}
+
+.input {
+  width: 165px;
+  height: 40px;
+  border: 2px solid $fillnout;
+  background-color: transparent;
+  padding: 10px 42px 10px 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  color: $text;
+  font-weight: 600;
+  font-size: 16px;
+  &::placeholder {
+    color: #ffffff60;
+  }
+}
+
+.currency,
+.currency2 {
+  position: absolute;
+  margin: 0;
+  color: $fillnout;
+  font-weight: 500;
+  top: 25%;
+  right: 10px;
+}
+
+.limitBlock {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  gap: 10px;
+  p {
+    margin: 0;
+    color: $text;
+  }
+}
+
+.counterBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.counter {
+  color: $fillnout !important;
+  margin-left: 4px;
+}
+
+.select2 {
+  background-color: transparent !important;
+  border: 2px solid $fillnout !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select4 {
+  color: white !important;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 2px solid $fillnout !important;
+  border-radius: 8px !important;
+  box-sizing: border-box;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+  box-sizing: border-box;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.select8 {
+  background-color: $bgmodal !important;
+  border: 1px solid $fillnout !important;
+}
+
+.select9 {
+  color: $text !important;
+}
+
+.select10 {
+  color: $text !important;
+}
+
+.subTitle {
+  margin-top: 10px;
+  color: $text;
+}
+
+.requisitesInp {
+  padding: 5px 10px;
+  border: 2px solid $fillnout;
+  background-color: transparent;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  color: $text;
+  font-weight: 600;
+  font-size: 16px;
+  &::placeholder {
+    color: #ffffff60;
+  }
+}
+
+.select4 {
+  color: white !important;
+}
+
+.select1 {
+  color: $text !important;
+}
+
+.mini {
+  background-color: $backgroundModal;
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.okveds {
+  margin-bottom: 10px;
+}
+
+.type {
+  margin-top: 10px;
+  display: flex;
+}
+
+.mainCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid $fillnout;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: $fillnout;
+  border-radius: 50%;
+}
+
+.typeContent {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  cursor: pointer;
+  color: $text;
+  &:last-child {
+    margin-left: 29px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .mini {
+    width: 100%;
+  }
+  .mainLabel {
+    right: 20px;
+  }
+  .mainInput {
+    width: 100%;
+  }
+  .limits {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .inputBlock {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+  }
+  .limitBlock {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main {
+    margin-bottom: 50px;
+  }
+  .title {
+    margin: 0;
+  }
+}

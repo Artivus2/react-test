@@ -1,0 +1,184 @@
+@import "../../styles/colors.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $backgroundModal;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 100%;
+  flex: 1;
+  @media (max-width: 426px) {
+    width: 100%;
+  }
+  @media (max-width: 719px) {
+    border: 2px solid $details;
+  }
+}
+
+.content {
+  width: 100%;
+  // @media (max-width: 1250px) {
+  //   width: 90vw;
+  //   margin: 0 auto;
+  // }
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balanceInfo {
+  display: flex;
+  width: 151px;
+  margin-right: 50px;
+  .info {
+    margin-left: 5px;
+  }
+}
+
+.generalText {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+  color: $text;
+  span {
+    color: $fillnout;
+  }
+}
+
+.generalExnode {
+  font-size: 18px;
+  color: #4172f6;
+  font-weight: 700;
+}
+
+.balanceText {
+  font-size: 32px;
+  color: $fillnout;
+  margin: 0;
+}
+
+.mainBalance {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.currency {
+  font-size: 24px;
+  color: $text;
+  margin: 0 0 0 10px;
+}
+
+.infoBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.available,
+.frozen {
+  font-size: 12px;
+  color: #ffffff70;
+  margin: 0;
+}
+
+.btnsBlock {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  a {
+    text-decoration: none;
+    @media (max-width: 426px) {
+      flex: 1;
+    }
+  }
+  @media (max-width: 719px) {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.inArrow {
+  transform: rotate(180deg);
+}
+
+.btnText {
+  color: #ffffff90;
+  font-size: 16px;
+  margin-top: 5px;
+  @media (max-width: 719px) {
+    margin-top: 0;
+  }
+}
+
+.btnBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 426px) {
+    // flex: 1;
+  }
+  @media (max-width: 719px) {
+    border: 2px solid $fillnout;
+    border-radius: 8px;
+    flex: 1;
+    padding: 10px;
+    min-width: 45%;
+  }
+}
+
+.bottomBtn {
+  width: 100%;
+  background-color: $fillnout;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: $text;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:active {
+    transform: scale(0.95);
+  }
+  margin-bottom: 5px;
+}
+
+.navLink {
+  text-decoration: none;
+  width: 100%;
+}
+
+.fiatBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fiat {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+@media (max-width: 719px) {
+  .balanceText {
+    font-size: 18px;
+  }
+}

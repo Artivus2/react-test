@@ -1,0 +1,331 @@
+@import "../../styles/colors.scss";
+
+.main {
+  position: relative;
+  @media screen and (max-width: 719px) {
+    margin-bottom: 10px;
+  }
+}
+.inputs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+  color: $text;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  @media screen and (max-width: 719px) {
+    font-size: 14px;
+  }
+}
+
+.select2 {
+  background-color: $background !important;
+  border: 2px solid $fillnout !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+  width: 305px;
+  height: 40px;
+}
+
+.select4 {
+  color: white !important;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 2px solid $fillnout !important;
+  border-radius: 8px !important;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.currency {
+  background-color: $fillnout;
+}
+
+.content {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contentBlock {
+  // width: 330px;
+  flex: 1;
+  background-color: $backgroundModal;
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.price {
+  color: $fillnout;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  gap: 5px;
+  div {
+    font-size: 12px;
+  }
+  img {
+    display: none;
+  }
+}
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yourPrice,
+.actual {
+  flex: 1;
+}
+
+.mainCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid $fillnout;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: $fillnout;
+  border-radius: 50%;
+}
+
+.typeContent {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  cursor: pointer;
+  color: $text;
+  &:last-child {
+    margin-left: 29px;
+  }
+}
+
+.type {
+  margin-top: 10px;
+  display: flex;
+}
+
+.counter {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 13.5px;
+  &Content {
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid $fillnout;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &Input {
+    width: 50px;
+    display: block;
+  }
+  button {
+    border: 2px solid $fillnout;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 20px 0 10px 0;
+    color: $text;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.controlls {
+  color: $text;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.summ {
+  // width: 330px;
+  flex: 1;
+  margin-left: 10px;
+  background-color: $backgroundModal;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid $fillnout;
+  box-sizing: border-box;
+  p {
+    color: $text;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  input {
+    border: 2px solid $fillnout;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 10px 0;
+    outline: none;
+    color: $text;
+    font-weight: 600;
+    font-size: 16px;
+    &::placeholder {
+      color: #ffffff60;
+    }
+  }
+}
+
+.btn {
+  width: 140px;
+  height: 40px;
+  background-color: $fillnout;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.inputPrice {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.select4 {
+  color: white !important;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: $text;
+}
+
+@media (max-width: 576px) {
+  .inputs {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .arr {
+    display: none;
+  }
+
+  .content {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contentBlock {
+    width: 100% !important;
+  }
+
+  .summ {
+    width: 100% !important;
+    margin-left: 0px;
+  }
+
+  .typeContent {
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+  .input {
+    flex: 1;
+  }
+  .select2 {
+    width: unset;
+  }
+  .select {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .inputs {
+    gap: 10px;
+  }
+
+  .content {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .contentBlock {
+  }
+
+  .summ {
+    margin-left: 0px;
+  }
+
+  .typeContent {
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+  .input {
+    width: 100%;
+  }
+  .select {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .price {
+    font-size: 20px;
+  }
+}

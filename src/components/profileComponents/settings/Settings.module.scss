@@ -1,0 +1,262 @@
+@import "../../../components/styles/colors.scss";
+
+.main {
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px 15px 10px;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px 0;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  color: $text;
+  margin: 0;
+}
+
+.items {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  background-color: $backgroundModal;
+  padding: 18px 10px;
+  border-radius: 10px;
+  border: 1px solid $fillnout;
+  box-sizing: border-box;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px;
+  }
+}
+
+.text {
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text;
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(242, 234, 255, 0.6);
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 600;
+  color: $text;
+}
+
+.btn {
+  background-color: $fillnout;
+  width: 140px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $fillnout;
+  }
+}
+
+.avatarMain {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: $backgroundModal;
+  backdrop-filter: blur(5px);
+  top: 0px;
+  left: 0;
+  z-index: 101;
+}
+
+.avaBox {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarRoot,
+.nameRoot {
+  background-color: $background;
+  width: 588px;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 102;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid $details;
+  box-sizing: border-box;
+  @media (max-width: 719px) {
+    width: 95%;
+    // top: 0;
+    // width: 100%;
+    // height: 100vh;
+    // border-radius: 0px;
+  }
+}
+.nameRoot {
+  top: 15%;
+  @media (max-width: 576px) {
+    // top: 0;
+  }
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBlocktitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text;
+  margin: 0;
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+.cross {
+  cursor: pointer;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.ok {
+  color: #64cb8c;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.avatar {
+  border: 2px solid $fillnout;
+  border-radius: 100%;
+}
+
+.formFileUpload {
+  margin: 0 0 30px 0;
+  height: 160px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  color: $text;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.inputFileUpload {
+  display: none;
+}
+
+.labelFileUpload {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: $fillnout;
+  background-color: $backgroundModal;
+}
+
+.labelFileUpload.drag-active {
+  background-color: #ffffff;
+}
+
+.uploadButton {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 0.25rem;
+  border: none;
+  background-color: transparent;
+  color: $fillnout;
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+.dragFileElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.btnOkSmall {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: $fillnout;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(242, 234, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $fillnout;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.photoOk {
+  color: $fillnout;
+}

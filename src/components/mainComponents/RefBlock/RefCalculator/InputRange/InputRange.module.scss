@@ -1,0 +1,59 @@
+@import "../../../../styles/colors.scss";
+
+.inputRange {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .inputFlexWrapper {
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .range {
+      flex-grow: 1;
+    }
+
+    .monitor {
+      height: 40px;
+      width: 160px;
+
+      background-color: transparent;
+      font-size: 24px;
+      line-height: 1;
+      text-align: center;
+      color: white;
+      border: $fillnout solid 1px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    label {
+      font-size: 16px;
+    }
+
+    .inputFlexWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .range {
+        align-self: stretch;
+      }
+
+      .monitor {
+        height: 36px;
+        width: 130px;
+
+        font-size: 20px;
+      }
+    }
+  }
+}

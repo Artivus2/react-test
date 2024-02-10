@@ -1,0 +1,75 @@
+@import "../../components/styles/colors.scss";
+
+.main {
+  color: $text;
+}
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  padding: 143px 10px 20px 10px;
+}
+
+.containerS {
+  display: flex;
+  gap: 10px;
+  // flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2,
+.skeletonBlock3 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+}
+
+.skeletonBlock2 {
+  flex: 2;
+}
+.skeletonBlock3 {
+  flex: 2;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.topBlock {
+  width: 100%;
+}
+
+.bottomBlock {
+  display: flex;
+  padding: 0 10px 100px 10px;
+}
+
+.leftBlock,
+.rightBlock {
+  flex: 1;
+}
+
+.rightBlock {
+  position: relative;
+  padding-top: 10px;
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
+
+.rightBlockSmall {
+  position: fixed;
+  z-index: 202;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: $backgroundMenu;
+  @media (min-width: 1440px) {
+    display: none;
+  }
+  @media (max-width: 1439px) {
+    display: none;
+    z-index: 5000;
+  }
+}

@@ -1,0 +1,184 @@
+@import "../../styles/colors.scss";
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: $backgroundModal;
+  backdrop-filter: blur(5px);
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 100;
+}
+
+.main {
+  position: fixed;
+  top: 8%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 710px;
+  height: fit-content;
+  background-color: $background;
+  border: 2px solid $fillnout;
+  border-radius: 20px;
+  display: none;
+  padding: 26px 20px 80px 20px;
+  z-index: 20000;
+  box-sizing: border-box;
+}
+
+.fiatBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fiat {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.active {
+  display: block;
+}
+
+.topBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cross,
+.arr {
+  cursor: pointer;
+}
+
+.arr {
+  transform: rotate(180deg);
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  color: $text;
+}
+
+.btnOk,
+.btnDis {
+  width: 140px;
+  height: 40px;
+  background-color: $fillnout;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $fillnout;
+  color: $text;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  // max-width: 500px;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btnOk {
+  color: $text;
+  background-color: $fillnout;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btnDis {
+  color: #ffffff60;
+  background-color: $backgroundModal;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0px;
+    // z-index: 101;
+    overflow: auto;
+    padding-top: 76px;
+  }
+  .active {
+    display: block;
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+    position: static;
+  }
+  .btnDis,
+  .btnOk {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0px;
+    // z-index: 101;
+    overflow: auto;
+    padding-top: 76px;
+  }
+  .active {
+    display: block;
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main {
+    position: fixed;
+    top: 10%;
+    padding-bottom: 20px;
+    // z-index: 101;
+  }
+  .active {
+    display: block;
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+    position: static;
+  }
+}

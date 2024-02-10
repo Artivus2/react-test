@@ -1,0 +1,75 @@
+@import "../../styles/colors.scss";
+
+.main {
+  @media screen and (max-width: 719px) {
+    margin-bottom: 10px;
+  }
+}
+
+.rules {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  color: $text;
+  border: 2px solid $fillnout;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  &::placeholder {
+    color: #ffffff60;
+  }
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: blue #2666ff10;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2666ff10;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fillnout;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+}
+
+.bottomBlock {
+  color: #f59b13;
+  background: #f59b1310;
+  border: 1px solid #f59b13;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+.title {
+  font-size: 16px;
+  color: $lightPurpuleText;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .topBlock {
+    margin-top: 10px;
+    height: unset;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .bottomBlock {
+    margin-bottom: 50px;
+  }
+}

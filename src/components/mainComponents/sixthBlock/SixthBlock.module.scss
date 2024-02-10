@@ -1,0 +1,151 @@
+@import './../../../components/styles/colors.scss';
+@import '../../styles/placeholders.scss';
+
+.title {
+  @extend %h3-main-placeholder-two;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  font-size: 25px;
+  .blockLists {
+    color: $white;
+    width: 100%;
+    .list {
+      z-index: 3;
+      margin: 30px;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: -35px;
+        content: '●';
+        color: $mainText;
+        filter: drop-shadow(0 0 5px $mainText);
+      }
+    }
+  }
+  .imgBlock6 {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .title {
+    margin: 150px 0 30px 0;
+  }
+  .container {
+    margin: 0 auto;
+    font-size: 25px;
+    .imgBlock {
+      position: absolute;
+      height: 1000px;
+      top: -155px;
+      left: 500px;
+    }
+    .blockLists {
+      color: $white;
+      width: 50%;
+      height: 700px;
+      .listHead {
+        font-size: 30px;
+      }
+      .list {
+        font-size: 25px;
+        margin: 30px;
+        position: relative;
+        &:before {
+          position: absolute;
+          left: -35px;
+          content: '●';
+          color: $mainText;
+          font-size: 30px;
+          filter: drop-shadow(0 0 5px $mainText);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1919px) and (min-width: 1279px) {
+  .title {
+    margin: 150px 0 30px 0;
+  }
+  .container {
+    background-position: 0% 0%;
+    .blockLists {
+      height: 650px;
+    }
+    .imgBlock {
+      position: absolute;
+      height: 1000px;
+      top: -155px;
+      left: -100px;
+      filter: brightness(0.4);
+    }
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 719px) {
+  .title {
+    margin: 80px 0 25px 0;
+    font-size: 30px;
+  }
+  .container {
+    background-size: 100%;
+    .blockLists {
+      height: min-content;
+    }
+    .listHead {
+      font-size: 15px;
+    }
+    .imgBlock {
+      position: absolute;
+      height: 440px;
+      top: 0;
+      left: 150px;
+      filter: brightness(0.4) blur(7px);
+    }
+    .list {
+      font-size: 12px;
+      margin: 30px;
+      max-width: 400px;
+      position: relative;
+      &:before {
+        left: -25px;
+        top: -7px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 719px) {
+  .title {
+    margin: 80px 0 25px 0;
+    font-size: 30px;
+  }
+  .container {
+    .listHead {
+      position: relative;
+      font-size: 15px;
+      z-index: 2;
+    }
+    .imgBlock {
+      position: absolute;
+      height: 440px;
+      top: 0;
+      left: 0;
+      filter: brightness(0.4) blur(7px);
+    }
+    .list {
+      font-size: 12px;
+      margin: 30px;
+      max-width: 400px;
+      position: relative;
+
+      &:before {
+        left: -25px;
+        top: -7px;
+        font-size: 20px;
+      }
+    }
+  }
+}

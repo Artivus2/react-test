@@ -1,0 +1,307 @@
+@import "../../styles/colors.scss";
+
+.username {
+  color: $text;
+  font-weight: 700;
+  font-size: 18px;
+  @media (max-width: 576px) {
+    font-size:14px;
+    font-weight:600;
+    color:rgba(242, 234, 255, 0.8);
+  }
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $lightVioletText;
+  flex-wrap: wrap;
+  @media (max-width: 1439px) {
+    padding: 10px 0;
+    gap: 10px;
+  }
+}
+
+.priceName {
+  display: none;
+  @media (max-width: 1439px) {
+    display: block;
+    color: $text;
+    font-weight: 700;
+    font-size: 16px;
+  }
+   @media (max-width: 576px) {
+    font-size: 14px;
+    color:rgba(242, 234, 255, 0.8);
+    font-weight:600;
+   }
+}
+
+.curPrice {
+  color: $text;
+  font-weight: 700;
+  font-size: 16px;
+   @media (max-width: 576px) {
+    color:rgba(242, 234, 255, 0.8);
+    font-size:18px;
+    font-weight:500;
+   }
+  span {
+    font-size: 12px;
+    font-weight: 400;
+     @media (max-width: 576px) {
+      color:rgba(242, 234, 255, 0.8);
+      font-size:14px;
+      font-weight:400;
+   }  
+  }
+}
+
+.item1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media (max-width: 1439px) {
+    flex: unset;
+    width: 100%;
+  }
+}
+.item2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1439px) {
+    flex: unset;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.item3 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  // flex-direction: column;
+  justify-content: center;
+  @media (max-width: 1439px) {
+  }
+}
+.item4 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text;
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
+.item4Small {
+  display: none;
+  div {
+    p {
+      background-color: $backgroundModal;
+      padding: 2px 5px;
+      border-radius: 6px;
+      color: $text;
+      @media (max-width: 1439px) {
+       font-size:10px;
+       font-weight:400;
+       color:rgba(255, 255, 255, 0.6);
+       border-radius: 5px;
+       padding: 4px;
+      }
+    }
+  }
+  @media (max-width: 1439px) {
+    display: flex;
+    width: 100%;
+  }
+}
+.item5 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1439px) {
+  }
+  @media (max-width: 576px) {
+    flex: unset;
+  }
+}
+
+.ava {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid $fillnout;
+}
+
+.currency {
+  font-size: 14px;
+  color: $lightVioletText;
+  margin-left: 4px;
+}
+
+.limit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  &:nth-child(1) {
+    color: $text;
+    @media (max-width: 1439px) {
+      font-size: 12px;
+    }
+    @media (max-width: 1439px) {
+      max-width:55px;
+    }
+  }
+  &:nth-child(2) {
+    color: $text;
+    @media (max-width: 1439px) {
+      font-size: 12px;
+    }
+  }
+  &Title {
+    font-size: 14px;
+    color: $fillnout;
+    margin-right: 20px !important;
+    font-weight: 600;
+    @media (max-width: 1439px) {
+      font-size: 10px;
+      text-align: start;
+    }
+     @media (max-width: 567px) {
+      font-size:10px;
+      color:rgba(242, 234, 255, 0.6);
+      margin-right: 0px !important;
+    }
+  }
+  &Text {
+    font-size: 12px;
+    font-weight: 600;
+    @media (max-width: 567px) {
+      font-size:10px;
+      color:rgba(242, 234, 255, 0.8);
+      font-weight:400;
+    }
+  }
+  @media (max-width: 1439px) {
+    justify-content: flex-start;
+  }
+}
+
+.userinfo {
+  font-size: 14px;
+  color: $fillnout;
+  margin-right: 20px !important;
+  font-weight: 600;
+  @media (max-width: 1439px) {
+    font-size: 10px;
+    text-align: start;
+  }
+  @media (max-width: 567px) {
+    font-size:12px;
+    font-weight:400;
+    color:rgba(242, 234, 255, 0.8);
+  }
+}
+
+.btnBuy {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $fillnout;
+  border-radius: 6px;
+  color: $white;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $background;
+    border: 1px solid $fillnout;
+    color: $fillnout;
+  }
+  @media (max-width: 1250px) {
+    width: 100%;
+    margin-top: 10px;
+  }
+  @media (max-width: 576px) {
+    font-weight:600;
+    width:114px;
+  }
+}
+.btnSell {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $fillnout;
+  border-radius: 6px;
+  color: $white;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $background;
+    border: 1px solid $fillnout;
+    color: $fillnout;
+  }
+  @media (max-width: 1250px) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.banks {
+  color: $fillnout;
+  font-weight: 600;
+  font-size: 14px;
+  .bank {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .limitText {
+    font-size: 10px;
+  }
+
+  .banks {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .item1 {
+    flex: 1.3;
+  }
+  .curPrice {
+    font-size: 10px;
+  }
+  .userinfo {
+    font-size: 10px;
+  }
+  .limitTitle {
+    font-size: 10px;
+  }
+  .limitText {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .userinfo {
+    font-size: 12px;
+  }
+  .limitText {
+    font-size: 12px;
+  }
+}

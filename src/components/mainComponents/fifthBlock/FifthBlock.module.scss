@@ -1,0 +1,158 @@
+@import "./../../../components/styles/colors.scss";
+@import "../../styles/placeholders.scss";
+
+.title {
+  @extend %h3-main-placeholder-two;
+}
+.blockCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card {
+    background-color: $backgroundModal;
+    border: 1px solid $fillnout;
+    color: $white;
+    .cardTitle {
+      color: $fillnout;
+    }
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .title {
+    font-size: 60px;
+    margin: 150px 0 30px 0;
+  }
+  .card {
+    padding: 34px 14px;
+    margin: 7px 0;
+    border-radius: 30px;
+    width: 80%;
+    font-size: 18px;
+
+    .cardTitle {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+  }
+  .blockCards .card:nth-child(1) {
+    width: 30%;
+  }
+  .blockCards .card:nth-child(2) {
+    width: 36%;
+  }
+  .blockCards .card:nth-child(3) {
+    width: 32%;
+  }
+
+  .blockCards .card:nth-child(4) {
+    width: 40%;
+  }
+  .blockCards .card:nth-child(5) {
+    width: 32%;
+  }
+  .blockCards .card:nth-child(6) {
+    width: 26%;
+  }
+}
+@media screen and (max-width: 1919px) and (min-width: 1279px) {
+  .title {
+    text-align: end;
+    font-size: 60px;
+    margin: 150px 0 30px 0;
+  }
+  .card {
+    padding: 34px 14px;
+    margin: 7px 0;
+    border-radius: 30px;
+    width: 80%;
+    font-size: 18px;
+    .cardTitle {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+  }
+
+  .blockCards .card:nth-child(1) {
+    width: 39%;
+  }
+  .blockCards .card:nth-child(2) {
+    width: 59%;
+  }
+
+  .blockCards .card:nth-child(3) {
+    width: 59%;
+  }
+  .blockCards .card:nth-child(4) {
+    width: 39%;
+  }
+
+  .blockCards .card:nth-child(5) {
+    width: 39%;
+  }
+  .blockCards .card:nth-child(6) {
+    width: 59%;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 719px) {
+  .title {
+    font-size: 30px;
+    text-align: end;
+    margin: 80px 0 25px 0;
+  }
+  .card {
+    padding: 20px 10px;
+    margin: 7px 0;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 12px;
+    height: 170px;
+    .cardTitle {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+  }
+
+  .blockCards .card:nth-child(1) {
+    width: 59%;
+  }
+  .blockCards .card:nth-child(2) {
+    width: 39%;
+  }
+
+  .blockCards .card:nth-child(3) {
+    width: 39%;
+  }
+  .blockCards .card:nth-child(4) {
+    width: 59%;
+  }
+
+  .blockCards .card:nth-child(5) {
+    width: 59%;
+  }
+  .blockCards .card:nth-child(6) {
+    width: 39%;
+  }
+}
+@media screen and (max-width: 719px) {
+  .title {
+    font-size: 30px;
+    text-align: end;
+    margin: 80px 0 25px 0;
+  }
+  .card {
+    padding: 20px 10px;
+    margin: 7px 0;
+    border-radius: 20px;
+    width: 90%;
+    height: 130px;
+    font-size: 12px;
+    .cardTitle {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+  }
+  .blockCards .card:nth-child(2n) {
+    margin-left: 10%;
+  }
+}

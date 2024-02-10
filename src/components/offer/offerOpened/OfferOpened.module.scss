@@ -1,0 +1,224 @@
+@import "../../styles/colors.scss";
+
+.openOfferContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  animation: openInfo 0.15s linear;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-right: 2px solid $fillnout;
+  padding: 10px 100px;
+  box-sizing: border-box;
+}
+
+.details {
+  position: relative;
+  width: 100%;
+  input {
+    border: 2px solid $fillnout;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 10px 0;
+    outline: none;
+    color: $text;
+    font-weight: 600;
+    font-size: 16px;
+    &::placeholder {
+      color: #ffffff60;
+    }
+  }
+  .allBtn {
+    position: absolute;
+    right: 10px;
+    top: 53px;
+    border: none;
+    background-color: transparent;
+    color: $fillnout;
+    cursor: pointer;
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  h5 {
+    color: #ffffff60;
+    margin: 0;
+    font-weight: 500;
+  }
+  p {
+    color: $text;
+  }
+}
+
+.boxChoose {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  gap: 5px;
+  margin-bottom: 5px;
+  h5 {
+    width: 100%;
+    color: #ffffff60;
+    margin: 0;
+    font-weight: 500;
+  }
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+    color: $text;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: $backgroundModal;
+    transition: all 0.2s linear;
+    cursor: pointer;
+  }
+}
+
+.bankChoose {
+  border: 2px solid $fillnout !important;
+}
+
+.btnOk,
+.btnDis {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btnOk {
+  color: $text;
+  background-color: $fillnout;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btnDis {
+  color: #ffffff60;
+  background-color: $backgroundModal;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px 100px;
+  box-sizing: border-box;
+}
+
+.info {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .navItem {
+    color: $text;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    height: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .left,
+  .right {
+    padding: 10px;
+    flex: none;
+  }
+  .left {
+    border-right: none;
+  }
+  .navItem {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .left {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .left,
+  .right {
+    padding: 10px;
+  }
+  .navItem {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 719px) {
+  .openOfferContainer {
+    flex-direction: column;
+  }
+  .left {
+    border-right: none;
+  }
+}
+
+@keyframes openInfo {
+  0% {
+    height: 0px;
+    color: rgba(240, 248, 255, 0);
+    transform: scaleY(0.1);
+  }
+  50% {
+    height: 50%;
+    transform: scaleY(0.5);
+  }
+  100% {
+    height: fit-content;
+  }
+}

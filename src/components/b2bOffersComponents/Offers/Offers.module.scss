@@ -1,0 +1,33 @@
+@import "../../styles/colors";
+
+.offersWrapper {
+  padding: 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  filter: blur(2px);
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: $white;
+  font-size: 40px;
+  font-weight: 700;
+}
+.notFound {
+  color: $fillnout;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  height: 100%;
+  margin-top: 10%;
+}

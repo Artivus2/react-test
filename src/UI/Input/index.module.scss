@@ -1,0 +1,31 @@
+@import "../../components/styles/colors.scss";
+
+.root {
+  position: relative;
+  width: 100%;
+}
+
+.inp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid $fillnout;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: $text;
+  outline: none;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    // font-family: RobotoFlex;
+    font-weight: 400;
+  }
+}
+
+.eyeSvg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

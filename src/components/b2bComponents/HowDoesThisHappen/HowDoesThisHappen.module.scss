@@ -1,0 +1,89 @@
+@import "./../../../components/styles/colors.scss";
+@import "../../styles/placeholders";
+.howDoesThisHappen {
+  position: relative;
+  color: white;
+  margin: 200px 0;
+  .title {
+    @extend %h3-main-placeholder;
+    text-align: center;
+  }
+  .infoTitle {
+    text-align: center;
+    font-size: 30px;
+    @media screen and (max-width: 719px) {
+      font-size: 20px;
+    }
+  }
+  .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    .content {
+      font-size: 24px;
+      width: 48%;
+      .itemContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 15px 0;
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 40px;
+          border: 4px solid rgba(87, 244, 244, 0.397);
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: aqua;
+          @media screen and (max-width: 719px) {
+            margin: 10px;
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+          }
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          height: 100px;
+          width: 90%;
+        }
+        .picture {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100px;
+          width: 100px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+.background1 {
+  position: absolute;
+  top: -2800px;
+  left: -600px;
+}
+.background2 {
+  position: absolute;
+  top: -600px;
+  left: -500px;
+  height: 1200px;
+}
+
+@media screen and (max-width: 719px) {
+  .contentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    .content {
+      width: 100% !important;
+    }
+  }
+  .item {
+    font-size: 16px;
+  }
+}

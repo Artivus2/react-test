@@ -1,0 +1,317 @@
+@import "../../../components/styles/colors.scss";
+
+.top {
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px 15px 10px;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px 0;
+  }
+}
+
+.bottom {
+  margin-top: 10px;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px 15px 10px;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px 0;
+  }
+}
+
+.twoFaMain {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: $backgroundModal;
+  top: 0px;
+  left: 0;
+  z-index: 101;
+}
+
+.twoFaRoot,
+.passRoot {
+  background-color: $backgroundMenu;
+  width: 400px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 102;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid $details;
+  box-sizing: border-box;
+  @media (max-width: 576px) {
+    // top: 0;
+    width: 95%;
+    // height: 100vh;
+    // border-radius: 0px;
+  }
+}
+.passRoot {
+  top: 15%;
+  @media (max-width: 576px) {
+    // top: 0;
+  }
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBlocktitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text;
+  margin: 0;
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+.cross {
+  cursor: pointer;
+}
+
+.twoFaText {
+  font-size: 12px;
+  font-weight: 600;
+  color: $text;
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.qrContainer {
+  margin: 0 auto;
+  width: 170px;
+  height: 170px;
+  background-color: $lightPurpule;
+  border-radius: 6px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: $text;
+  margin: 0 0 6px 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  color: $text;
+  margin: 0 0 10px 0;
+}
+
+.check {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.title2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: $text;
+  margin: 0;
+  @media (max-width: 1439px) {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.items {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  background-color: $backgroundModal;
+  padding: 18px 10px;
+  border-radius: 10px;
+  border: 1px solid $fillnout;
+  @media screen and (max-width: 1279px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media (max-width: 1439px) {
+    border: none;
+  }
+}
+
+.itemName {
+  font-size: 20px;
+  font-weight: 600;
+  color: $text;
+}
+
+.container {
+  flex: 1;
+  text-align: center;
+  &:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 500px) {
+    flex: unset;
+  }
+}
+.container:first-child {
+  text-align: start;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+.container:last-child {
+  text-align: end;
+}
+
+.btnOk {
+  background-color: $fillnout;
+  width: 140px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $fillnout;
+  }
+}
+.btnDis {
+  background-color: $backgroundModal;
+  color: $fillnout;
+  width: 140px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+}
+
+.btnOk,
+.btnDis {
+  @media screen and (max-width: 1279px) {
+    width: 100%;
+    padding: 5px 10px;
+  }
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+.ok {
+  color: #64cb8c;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.popup__subtitle {
+  color: $text;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: normal;
+}
+
+.popup__text {
+  padding-left: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 145%;
+}
+
+.imgBlock {
+  display: flex;
+  align-items: center;
+}
+
+.popup__file {
+  border-radius: 6px;
+  border: 1px solid var(--stroke, $fillnout);
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  gap: 4px;
+  & input {
+    display: none;
+  }
+  & label {
+    display: flex;
+    padding: 6px 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.fileInfo {
+  margin-left: 20px;
+}
+
+.ver {
+  top: 7%;
+}
+
+.goCheck {
+  text-align: center;
+  color: #64cb8c;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}

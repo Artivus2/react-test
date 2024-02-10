@@ -1,0 +1,46 @@
+@import "../../components/styles/colors";
+
+.switcher {
+  border: $hideText solid 1px;
+  border-radius: 8px;
+  padding: 5px;
+
+  display: flex;
+  @media screen and (max-width: 719px) {
+    // flex: 1;
+  }
+
+  .option {
+    // resetButtonStyles
+    background: none;
+    border: none;
+
+    padding: 5px 10px;
+    min-width: 130px;
+    color: $white;
+    font-size: 16px;
+
+    cursor: pointer;
+  }
+
+  .selectedOption {
+    background-color: $fillnout;
+
+    &:first-child {
+      border-right: $fillnout solid 1px;
+      border-radius: 8px;
+    }
+
+    &:last-child {
+      border-left: $fillnout solid 1px;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .option {
+    min-width: unset !important;
+    width: 100%;
+  }
+}

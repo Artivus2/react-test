@@ -1,0 +1,58 @@
+@import "./../../../components/styles/colors.scss";
+@import "../../styles/b2bStyles.scss";
+@import "../../styles/placeholders";
+
+.howItWorksBlock {
+  height: 800px;
+  h3 {
+    @extend %h3-main-placeholder;
+    text-align: center;
+    margin: 200px 0;
+  }
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 30px;
+      .content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        .imgContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .picture {
+          }
+        }
+        .textContainer {
+          color: white;
+          text-align: center;
+          width: 250px;
+          height: 50%;
+        }
+      }
+      .cardBackground {
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .howItWorksBlock {
+    height: fit-content;
+    padding-bottom: 100px;
+  }
+  .cardContainer {
+    flex-wrap: wrap;
+  }
+}

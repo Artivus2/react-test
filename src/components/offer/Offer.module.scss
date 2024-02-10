@@ -1,0 +1,86 @@
+@import "../styles/colors.scss";
+
+.main {
+  // height: 70px;
+  p {
+    margin: 0;
+     i{
+       font-style: normal;
+       @media (max-width: 576px) {
+        display:none;
+       }
+     }
+  }
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $backgroundModal;
+  border: 2px solid $details;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  @media (max-width: 1250px) {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    align-items: center;
+    border-top: none;
+  }
+}
+
+.errModalContainer {
+  position: fixed;
+  background-color: rgb(40, 20, 75);
+  border: 1px solid $btnBlue;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  right: 0;
+  top: 100px;
+  color: $lightPurpuleText;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 999;
+}
+
+.marq {
+  background-color: #ae7eff;
+  padding: 5px;
+  margin-top: 10px;
+  animation: animMarqueeRtl 3.15s linear;
+}
+
+@keyframes animMarqueeRtl {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  .errModalContainer {
+    border-radius: 0px;
+    top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .errModalContainer {
+    top: 50px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .main {
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .errModalContainer {
+    top: 70px;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../../styles/colors";
+
+%select-value-wrapper {
+  padding: 25px 15px;
+  width: 360px;
+  @media screen and (max-width: 719px) {
+    width: 100%;
+  }
+}
+
+.customSelectWrapper {
+  display: inline-block;
+  box-sizing: border-box;
+
+  .customSelect {
+    background-color: #1caf8630;
+    border: $fillnout solid 1px;
+
+    -moz-border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+
+    position: relative;
+    z-index: 99;
+
+    @media screen and (max-width: 719px) {
+      border-radius: 8px;
+    }
+
+    .head {
+      @extend %select-value-wrapper;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+
+      cursor: pointer;
+
+      .arrow {
+        width: 11px;
+        height: 5px;
+      }
+
+      &:hover {
+        .arrow {
+          transform: scale(1.3);
+        }
+      }
+    }
+
+    .dropDownMenu {
+      position: relative;
+      z-index: 99;
+    }
+  }
+
+  .openBorder {
+    // -moz-border-radius: 8px 0 8px 8px;
+    // -webkit-border-radius: 8px 0 8px 8px;
+    // border-radius: 8px 0 8px 8px;
+  }
+}
+
+.searchField {
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  border-top: $fillnout solid 1px;
+
+  img {
+    width: 16px;
+    height: 15px;
+  }
+
+  input {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    outline: none;
+
+    font-family: "IBM Plex Mono", monospace;
+    color: $white;
+    font-size: 24px;
+    font-weight: 300;
+
+    &::before {
+      content: "LOOP";
+      font-weight: bold;
+      color: $white;
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.disabledArea {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

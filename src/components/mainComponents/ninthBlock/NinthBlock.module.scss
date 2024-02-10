@@ -1,0 +1,404 @@
+@import "./../../../components/styles/colors.scss";
+@import "../../styles/placeholders.scss";
+
+.title {
+  @extend %h3-main-placeholder-two;
+}
+.topButton {
+  background-color: $fillnout;
+  color: $white;
+  border: $fillnout;
+}
+.accardionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .accardionBlock {
+    position: relative;
+    z-index: 10;
+
+    .list {
+      position: relative;
+      border-bottom: 2px solid $fillnout;
+    }
+    .buttonListOpen {
+      float: right;
+      width: 30px;
+      height: 30px;
+      background-color: $fillnout;
+      color: $white;
+      border-radius: 3px;
+      border: $fillnout;
+      transition: 0.5s;
+      transform: scaleY(-1);
+    }
+    .buttonListClose {
+      transition: 0.5s;
+      float: right;
+      width: 30px;
+      height: 30px;
+      background-color: $fillnout;
+      color: $white;
+      border-radius: 3px;
+      border: $fillnout;
+    }
+    .listInfo {
+      animation: openInfo 0.15s forwards;
+    }
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .title {
+    margin: 350px 0 30px 0;
+    text-align: center;
+    font-size: 60px;
+  }
+  .topButton {
+    background-color: $backgroundModal;
+    color: white;
+    border-radius: 12px;
+    border: $backgroundModal;
+    width: 220px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .accardionContainer {
+    position: relative;
+    .ellipse {
+      position: absolute;
+      height: 3800px;
+      top: -1500px;
+      left: -200px;
+      z-index: 1;
+      filter: brightness(2);
+    }
+    .accardionBlock {
+      width: 48%;
+      padding: 40px 14px;
+      margin: 7px 0;
+      background-color: $backgroundModal;
+      border: 1px solid $fillnout;
+      border-radius: 30px;
+      color: $white;
+      height: max-content;
+      font-size: 18px;
+      .list {
+        position: relative;
+        font-size: 24px;
+        margin-top: 20px;
+        padding-bottom: 24px;
+        border-bottom: 2px solid $fillnout;
+        .listContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .buttonListOpen {
+        width: 30px;
+        height: 30px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+        transition: 0.5s;
+        transform: scaleY(-1);
+      }
+      .buttonListClose {
+        transition: 0.5s;
+        width: 30px;
+        height: 30px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+      }
+      .listInfo {
+        margin-top: 15px;
+        animation: openInfo 0.15s forwards;
+        font-size: 18px;
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1919px) and (min-width: 1279px) {
+  .title {
+    font-size: 60px;
+    margin: 250px 0 30px 0;
+  }
+  .topButton {
+    background-color: $fillnout;
+    color: $white;
+    border-radius: 12px;
+    border: $fillnout;
+    width: 220px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .accardionContainer {
+    position: relative;
+    .ellipse {
+      position: absolute;
+      height: 3500px;
+      top: -1200px;
+      left: -400px;
+      z-index: 1;
+      filter: brightness(2);
+    }
+    .accardionBlock {
+      width: 48%;
+      padding: 40px 14px;
+      margin: 7px 0;
+      background-color: $backgroundModal;
+      border: 1px solid $fillnout;
+      border-radius: 30px;
+      color: $white;
+      height: max-content;
+      font-size: 18px;
+      .list {
+        position: relative;
+        font-size: 24px;
+        margin-top: 20px;
+        padding-bottom: 24px;
+        border-bottom: 2px solid $fillnout;
+        .listContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .buttonListOpen {
+        width: 30px;
+        height: 30px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+        transition: 0.5s;
+        transform: scaleY(-1);
+      }
+      .buttonListClose {
+        transition: 0.5s;
+        width: 30px;
+        height: 30px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+      }
+      .listInfo {
+        margin-top: 15px;
+        animation: openInfo 0.15s forwards;
+        font-size: 18px;
+        text-align: justify;
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .title {
+    margin: 80px 0 25px 0;
+    font-size: 30px;
+  }
+  .topButton {
+    background-color: $fillnout;
+    color: $white;
+    border-radius: 12px;
+    border: $fillnout;
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .accardionContainer {
+    position: relative;
+    .ellipse {
+      position: absolute;
+      height: 3000px;
+      top: -700px;
+      left: -400px;
+      z-index: 1;
+      filter: brightness(2);
+    }
+    .accardionBlock {
+      width: 98%;
+      padding: 40px 14px;
+      margin: 7px 0;
+      background-color: $backgroundModal;
+      border: 1px solid $fillnout;
+      border-radius: 30px;
+      color: $white;
+      height: max-content;
+      font-size: 18px;
+      .list {
+        position: relative;
+        font-size: 18px;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid $fillnout;
+        .listContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .buttonListOpen {
+        width: 25px;
+        height: 25px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+        transition: 0.5s;
+        transform: scaleY(-1);
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .buttonListClose {
+        transition: 0.5s;
+        width: 25px;
+        height: 25px;
+        background-color: $backgroundModal;
+        color: $white;
+        border-radius: 3px;
+        border: $backgroundModal;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .listInfo {
+        margin-top: 15px;
+        animation: openInfo 0.15s forwards;
+        font-size: 13px;
+        text-align: justify;
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .title {
+    margin: 80px 0 25px 0;
+    font-size: 30px;
+  }
+  .topButton {
+    background-color: $fillnout;
+    color: $white;
+    border-radius: 12px;
+    border: $fillnout;
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .accardionContainer {
+    position: relative;
+    .ellipse {
+      position: absolute;
+      height: 3000px;
+      top: -700px;
+      left: -400px;
+      z-index: 1;
+      filter: brightness(2);
+    }
+    .accardionBlock {
+      width: 98%;
+      padding: 40px 14px;
+      margin: 7px 0;
+      background-color: $backgroundModal;
+      border: 1px solid $fillnout;
+      border-radius: 30px;
+      color: $white;
+      height: max-content;
+      font-size: 18px;
+      .list {
+        position: relative;
+        font-size: 18px;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid $fillnout;
+        .listContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .buttonListOpen {
+        width: 25px;
+        height: 25px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+        transition: 0.5s;
+        transform: scaleY(-1);
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .buttonListClose {
+        transition: 0.5s;
+        width: 25px;
+        height: 25px;
+        background-color: $fillnout;
+        color: $white;
+        border-radius: 3px;
+        border: $fillnout;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .listInfo {
+        margin-top: 15px;
+        animation: openInfo 0.15s forwards;
+        font-size: 13px;
+        text-align: justify;
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+@keyframes openInfo {
+  0% {
+    color: #01142c00;
+    height: 1px;
+  }
+  100% {
+    color: $white;
+    height: 100px;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .accardionContainer{
+    // background: rgba(16, 17, 18, 1);
+    padding:0;
+    margin:0;
+  }
+  .title{
+
+  }
+  .listContainer{
+      button{
+        background-color: transparent!important;
+        color:transparent;
+      }
+  }
+}

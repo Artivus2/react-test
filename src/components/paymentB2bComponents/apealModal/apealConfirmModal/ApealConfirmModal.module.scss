@@ -1,0 +1,307 @@
+@import "../../../styles/colors.scss";
+
+.popup {
+  background: var(--background-overlap, $bgmodal);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popup__block {
+  width: 588px;
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  padding: 20px;
+  position: relative;
+  background: $background;
+  z-index: 203;
+  overflow: auto;
+  max-height: 95vh;
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: blue #2666ff10;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2666ff10;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fillnout;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+  @media (max-width: 1439px) {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
+.popup__title {
+  color: $text;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.popup__btns {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.popup__yes {
+  color: $text;
+  height: 40px;
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff00;
+  font-size: 16px;
+  line-height: normal;
+  transition: 0.3s;
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  &:hover {
+    background: $fillnout;
+  }
+}
+.popup__no {
+  color: $text;
+  height: 40px;
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff00;
+  font-size: 16px;
+  line-height: normal;
+  transition: 0.3s;
+  border-radius: 8px;
+  border: 2px solid $fillnout;
+  &:hover {
+    background: $fillnout;
+  }
+}
+.popup__cancel {
+  background: var(--background-overlap, $bgmodal);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+}
+
+.infoBlock {
+  color: #f59b13;
+  border: 1px solid #f59b13;
+  border-radius: 6px;
+  padding: 10px;
+  ol {
+    padding-left: 20px;
+  }
+}
+
+.popup__subtitle {
+  color: $text;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: normal;
+}
+
+.changeBlock {
+  margin-top: 20px;
+}
+
+.radioBlock {
+  border: 1px solid $fillnout;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.radioText,
+.radioContainer,
+.popup__text {
+  color: rgba(242, 234, 255, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.radioContainer {
+  margin-bottom: 0;
+}
+
+/* для элемента input c type="radio" */
+.custom_radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom_radio */
+.custom_radio > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom_radio > span::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $fillnout;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: rgba(41, 20, 75, 0.7);
+}
+
+/* стили при наведении курсора на радио */
+.custom_radio > input:not(:disabled):not(:checked) + span:hover::before {
+  border-color: $fillnout;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom_radio > input:not(:disabled):active + span::before {
+  background-color: #b3d7ff;
+  border-color: $fillnout;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom_radio > input:focus + span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom_radio > input:focus:not(:checked) + span::before {
+  border-color: $fillnout;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom_radio > input:checked + span::before {
+  border-color: $fillnout;
+  background-color: $fillnout;
+  // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom_radio > input:disabled + span::before {
+  background-color: #e9ecef;
+}
+
+.textarea {
+  border: 1px solid $fillnout;
+  background: $background;
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 80px;
+  min-height: 80px;
+  margin-bottom: 10px;
+  color: $text;
+  font-weight: 600;
+}
+
+.popup__file {
+  border-radius: 6px;
+  border: 1px solid var(--stroke, $fillnout);
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  gap: 4px;
+  & input {
+    display: none;
+  }
+  & label {
+    display: flex;
+    padding: 6px 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.docs {
+  margin-bottom: 10px;
+}
+
+.imgBlock {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.fileInfo {
+  margin-left: 20px;
+}
+
+.doc {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--stroke, $fillnout);
+}
+
+.popup__text {
+  margin-bottom: 6px;
+}
+
+.tel {
+  border: 1px solid $fillnout;
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  background: $background;
+  color: $text;
+  font-weight: 600;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+  margin-top: 20px;
+}

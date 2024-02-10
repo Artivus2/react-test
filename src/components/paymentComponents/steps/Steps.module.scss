@@ -1,0 +1,57 @@
+@import "../../styles/colors.scss";
+
+.steps {
+  display: flex;
+  align-items: center;
+  // margin-top: 30px;
+  justify-content: space-between;
+}
+
+.line {
+  width: 100px;
+  height: 4px;
+  border: 1px solid #1caf8630;
+  border-radius: 10px;
+}
+
+.numberBlock {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1caf8630;
+  color: #1caf8630;
+}
+
+.stepBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70px;
+}
+
+.active {
+  background-color: $backgroundModal;
+  border: 1px solid $fillnout;
+  color: $white;
+}
+
+.descriptionBlock {
+  display: flex;
+  margin-top: 10px;
+}
+.description {
+  max-width: 150px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+  @media (max-width: 719px) {
+    font-size: 8px;
+  }
+}
+
+.centerNumber {
+  margin: 0px 100px;
+}

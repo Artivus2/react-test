@@ -1,0 +1,69 @@
+@import "../../components/styles/colors.scss";
+
+.bg {
+  background: $background;
+}
+
+.main {
+  margin: -135px auto 135px auto;
+  padding: 145px 10px 150px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navBlock {
+  max-width: 25%;
+  flex: 1;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 15px;
+  @media screen and (max-width: 1279px) {
+    display: none;
+    // max-width: 100%;
+    // width: 100%;
+  }
+}
+
+.sidebarItemContainer {
+  gap: 8px;
+  background-color: rgba(41, 20, 75, 1);
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-bottom: 20px;
+  @media (max-width: 1439px) {
+    height: 100%;
+  }
+}
+
+.infoBlock {
+  flex: 3;
+  @media screen and (max-width: 1279px) {
+    flex: 1;
+  }
+}
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  display: flex;
+  gap: 10px;
+  padding: 143px 10px 20px 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.skeletonBlock2 {
+  flex: 3;
+}

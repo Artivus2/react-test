@@ -1,0 +1,198 @@
+@import "../../../../components/styles/colors.scss";
+
+.blockItem {
+  display: none;
+  flex-direction: column;
+  border-bottom: 2px solid $backgroundModal;
+  margin-top: 21px;
+  margin-bottom: 5px;
+  padding: 10px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &Top {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 719px) {
+      gap: 5px;
+    }
+  }
+
+  &Title {
+    color: $text;
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: 574px) {
+      max-width: 280px;
+    }
+  }
+
+  &Btn {
+    transform: rotate(180deg);
+  }
+
+  &Body {
+    height: 0;
+    overflow: hidden;
+    color: $text;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.6s;
+
+    display: block;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &Visible {
+      transition: 0.6s;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    &Row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+
+      &OperationsTop {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        svg {
+          margin-left: 10px;
+        }
+      }
+
+      &Left {
+        color: $text;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 145%;
+      }
+
+      &Right {
+        color: $text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 145%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1020px) {
+    display: flex;
+  }
+}
+
+.coinIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.item {
+  flex: 1;
+  color: $text;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 145%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  @media (max-width: 719px) {
+    justify-content: space-between;
+  }
+}
+
+.saleTitle {
+  color: $text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-right: 6px;
+}
+.saleId {
+  font-size: 14px;
+}
+
+.itemBlock {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+  border-bottom: 1px solid $fillnout;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.operations {
+  &Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  &Btn {
+    border-radius: 8px;
+    background-color: $btnBlue;
+    padding: 10px 20px;
+    width: 100%;
+    min-width: 120px;
+    color: $text;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.btnsBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+}
+
+.btnBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.btnText {
+  color: #ffffff90;
+  font-size: 10px;
+  cursor: pointer;
+  margin: 0;
+}

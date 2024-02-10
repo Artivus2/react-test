@@ -1,0 +1,140 @@
+@import './../../../components/styles/colors.scss';
+@import '../../styles/placeholders.scss';
+
+.container {
+  max-width: 1720px;
+  margin: 0 auto;
+  font-size: 25px;
+  .title {
+    @extend %h3-main-placeholder-two;
+  }
+  .content {
+    color: $white;
+    margin: 0 0 15px 0;
+  }
+}
+@media screen and (min-width: 1919px) {
+  .title {
+    margin: 150px 0 30px 0;
+  }
+  .container {
+    position: relative;
+    margin: 0 auto;
+    font-size: 25px;
+    .phoneImg {
+      position: absolute;
+      height: 440px;
+      top: -20px;
+      right: -200px;
+      z-index: 1;
+    }
+    .ellipse3 {
+      position: absolute;
+      height: 2440px;
+      bottom: -400px;
+      left: -800px;
+      z-index: 1;
+    }
+  }
+}
+@media screen and (max-width: 1919px) and (min-width: 1279px) {
+  .container {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    text-align: end;
+    position: relative;
+
+    .phoneImg {
+      position: absolute;
+      height: 440px;
+      top: 100px;
+      left: -200px;
+      z-index: 1;
+      transform: rotate(180deg);
+    }
+    .ellipse3 {
+      position: absolute;
+      height: 2440px;
+      bottom: -400px;
+      left: -800px;
+      z-index: 1;
+    }
+  }
+  .title {
+    font-size: 60px;
+    width: 600px;
+    margin: 150px 0 30px 0;
+  }
+  .content {
+    width: 600px;
+    margin: 15px 0;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    text-align: end;
+    position: relative;
+    .phoneImg {
+      position: absolute;
+      height: 300px;
+      top: 0;
+      left: -150px;
+      z-index: 1;
+      transform: rotate(180deg);
+    }
+    .ellipse3 {
+      position: absolute;
+      height: 1440px;
+      bottom: -400px;
+      left: -300px;
+      z-index: 1;
+    }
+  }
+  .title {
+    margin: 330px 0 25px 0;
+    font-size: 30px;
+  }
+  .content {
+    color: $white;
+    font-size: 15px;
+    width: 380px;
+  }
+}
+@media screen and (max-width: 719px) {
+  .container {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    text-align: end;
+    position: relative;
+    .phoneImg {
+      position: absolute;
+      height: 300px;
+      top: 0;
+      left: -250px;
+      z-index: 1;
+      transform: rotate(180deg);
+    }
+    .ellipse3 {
+      position: absolute;
+      height: 1440px;
+      bottom: -400px;
+      left: -300px;
+      z-index: 1;
+    }
+  }
+  .title {
+    margin: 330px 0 25px 0;
+    font-size: 30px;
+  }
+  .content {
+    font-size: 15px;
+    width: 380px;
+  }
+}

@@ -1,0 +1,246 @@
+@import "../../components/styles/colors.scss";
+
+.bg {
+  background: $background;
+}
+
+.main,
+.disabled {
+  min-height: 100vh;
+  margin: -135px auto 135px auto;
+  @media (max-width: 1024px) {
+    padding: 0px 10px;
+  }
+}
+
+.banner {
+  background: url("../../assets/img/bannerBg.png") center center no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  img {
+    display: none;
+    @media screen and (max-width: 719px) {
+      display: block;
+    }
+  }
+  div {
+    text-align: center;
+    color: $text;
+  }
+  .bannerTop {
+    font-weight: 600;
+    @media (max-width: 576px) {
+       max-width: 270px;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 700!important;
+      margin-top:50px;
+      color:rgba(255, 255, 255, 1);
+      text-align: center;
+    }
+  }
+  .bannerBottom {
+    font-size: 12px;
+     @media (max-width: 576px) {
+       font-size: 14px;
+       color:rgba(255, 255, 255, 0.8);
+       margin-top:10px;
+       margin-bottom:54px;
+       text-align: center;
+     }
+  }
+}
+
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  filter: blur(2px);
+}
+
+.offersBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  // max-height: 558px;
+  // overflow-y: scroll;
+  // padding-right: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: blue #2666ff10;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2666ff10;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fillnout;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+}
+
+.notFound {
+  color: $fillnout;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  height: 100%;
+  margin-top: 10%;
+}
+
+@media (max-width: 719px) {
+  .offersBlock {
+    // max-height: 1000px;
+    // overflow-y: auto;
+    // padding-right: 10px;
+  }
+}
+
+
+
+
+.advantagesBlock{
+  margin:64px 0;
+  h2{
+    color:rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom:32px;
+  }
+  .advantagesBox{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    .advantagesItem{
+      background: rgba(16, 17, 18, 1);
+      padding:16px 12px;
+      border-radius: 12px;
+      .advantagesTop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+          strong{
+            color:rgba(28, 175, 134, 1);
+            font-size: 18px;
+            font-weight: 600;
+          }
+      }
+      .advantagesUp{
+        margin-top:12px;
+        p{
+          font-size: 14px;
+          font-weight: 400;
+          color:rgba(255, 255, 255, 0.8);
+          line-height: 20.3px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.tradeBlock{
+    h2{
+      font-size:24px;
+      font-weight: 700;
+      color:rgba(255, 255, 255, 1);
+      margin-bottom:40px;
+      text-align: center;
+    }
+    >img{
+      max-width: 329px;
+      width: 100%;
+      margin:15px auto;
+      display: block;
+    }
+    .tradeBox{
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+      .tradeItem{
+        padding:0 24px;
+          strong{
+            font-size:18px;
+            font-weight: 600;
+            color:rgba(28, 175, 134, 1);
+          }
+          p{
+            font-size:14px;
+            font-weight: 400;
+            color:rgba(255, 255, 255, 0.8);
+            margin-top:5px;
+          }
+      }
+    }
+}
+
+.cooperateBlock{
+  h2{
+    font-size:20px;
+    font-weight: 700;
+    color:rgba(255, 255, 255, 1);
+    text-align: center;
+    margin-bottom:65px;
+  }
+  .cooperateBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    row-gap: 42px;
+    column-gap: 20px;
+    text-align: center;
+  }
+}
+
+
+.proBlock{
+  margin-top:180px;
+  h2{
+    color:rgba(255, 255, 255, 0.8);
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .proBox{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+      .proItem{
+        padding:20px 10px;
+        border:solid 0.5px rgba(28, 175, 134, 1);
+        border-radius: 20px;
+        &:nth-child(even){
+          background: rgba(217, 217, 217, 0.1);
+        }
+        strong{
+          color:rgba(28, 175, 134, 1);
+          font-size: 18px;
+          font-weight: 600;
+        }
+        p{
+          color:rgba(255, 255, 255, 0.8);
+          font-size: 14px;
+          font-weight: 400;
+          margin-top:10px;
+        }
+      }
+    } 
+  >img{ 
+    margin:47px 0 90px 0; 
+  }
+}
+

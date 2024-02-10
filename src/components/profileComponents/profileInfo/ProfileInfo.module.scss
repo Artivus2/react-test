@@ -1,0 +1,373 @@
+@import "../../styles/colors.scss";
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payments {
+  width: 100%;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px 10px 10px;
+  background-color: $backgroundModal;
+  @media screen and (max-width: 719px) {
+    border: none;
+  }
+}
+
+.title {
+  color: $text;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.btnOk,
+.btnDis {
+  color: $text;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btnOk {
+  color: $text;
+  background-color: $fillnout;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btnDis {
+  color: #ffffff60;
+  background-color: $backgroundModal;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.twoFaMain {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: $backgroundModal;
+  backdrop-filter: blur(5px);
+  top: 0px;
+  left: 0;
+  z-index: 101;
+}
+
+.passRoot {
+  background-color: $backgroundMenu;
+  width: 400px;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 102;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  // border: 1px solid $fillnout;
+  box-sizing: border-box;
+  @media (max-width: 576px) {
+    width: 95%;
+    // top: 0;
+    // width: 100%;
+    // height: 100vh;
+    // border-radius: 0px;
+  }
+}
+.passRoot {
+  top: 15%;
+  @media (max-width: 576px) {
+    // top: 0;
+  }
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBlocktitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text;
+  margin: 0;
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+.cross {
+  cursor: pointer;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+.ok {
+  color: #64cb8c;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.subtitle {
+  color: $text;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.select2 {
+  background-color: $background !important;
+  border: 1px solid $details !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+}
+
+.select4 {
+  color: white !important;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 1px solid $details !important;
+  border-radius: 8px !important;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.number {
+  width: 100%;
+  background: transparent;
+  border: 1px solid $details;
+  outline: none;
+  border-radius: 8px;
+  color: $text;
+  font-weight: 400;
+  height: 38px;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.payment {
+  border: 1px solid $backgroundModal;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: $paymentBg;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paymentTop,
+.paymentBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $details;
+  padding: 10px 0;
+}
+
+.paymentBottom {
+  border-bottom: none;
+  @media screen and (max-width: 719px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.paymentRec {
+  @media screen and (max-width: 719px) {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $details;
+  }
+}
+
+.paymentName,
+.paymentDel {
+  background-color: $backgroundModal;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: $fillnout;
+  font-weight: 500;
+}
+
+.paymentDel {
+  color: $errorText;
+}
+
+.paymentTitle {
+  color: $hideText;
+  margin-bottom: 5px;
+}
+
+.mobileInfo {
+  .userInfo {
+    position: relative;
+    display: flex;
+    gap: 0px;
+    // flex-direction: row-reverse;
+    width: 100%;
+
+    @media (max-width: 424px) {
+      gap: 4px;
+      flex-direction: column;
+    }
+    @media (max-width: 1024px) {
+      // margin-top: 50px;
+      gap: 4px;
+      flex-direction: column;
+    }
+  }
+
+  .info {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .iconWrap {
+    position: absolute;
+    top: 10px;
+    // right: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border: 2px solid $fillnout;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .div {
+      border-radius: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .titleInfo {
+    margin-top: 0;
+  }
+
+  .titleInfo,
+  .titleInfo2 {
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: $text;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 65px;
+
+    @media (max-width: 426px) {
+      font-size: 18px;
+    }
+  }
+  .titleInfo2 {
+    font-size: 18px;
+    font-weight: 400;
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+    @media (max-width: 426px) {
+      font-size: 18px;
+    }
+  }
+
+  .errorWrap {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      gap: 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mobileInfo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 719px) {
+  .payment {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .payment {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .del {
+    margin-top: -60px;
+  }
+  .btnDis,
+  .btnOk {
+    width: 100%;
+  }
+}

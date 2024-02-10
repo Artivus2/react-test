@@ -1,0 +1,32 @@
+.option {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+
+  color: white;
+  font-size: 30px;
+  letter-spacing: 0.03em;
+
+  p {
+    margin-right: 50px;
+    text-align: right;
+    max-width: 900px;
+  }
+
+  @media screen and (max-width: 1919px){
+
+    p {
+      margin-right: 21px;
+    }
+  }
+
+  @media screen and (max-width: 1279px){
+    font-size: 15px;
+
+    p {
+      margin-right: 24px;
+      max-width: 540px;
+    }
+  }
+}

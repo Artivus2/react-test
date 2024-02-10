@@ -1,0 +1,37 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bottom {
+  display: flex;
+  gap: 10px;
+  @media (max-width: 426px) {
+    flex-wrap: wrap;
+  }
+}
+
+.skeletonContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+}
+
+.skeletonBlock2 {
+  flex: 2;
+}

@@ -1,0 +1,47 @@
+@import "../../components/styles/colors.scss";
+
+.confirm {
+  background: url("../../assets/img/bg.svg") 40% / cover no-repeat;
+  background-color: $background;
+  margin-top: -133px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wrap {
+  height: 100vh;
+}
+
+.text {
+  color: $text;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 80% 0 0 0;
+}
+
+.text2 {
+  color: $text;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 10px;
+  border: 2px solid $fillnout;
+  background-color: $fillnout;
+  transition: all 0.2s linear;
+  border-radius: 8px;
+  padding: 10px 80px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $text;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+  }
+}

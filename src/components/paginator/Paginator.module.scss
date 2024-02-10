@@ -1,0 +1,51 @@
+@import "../styles/colors.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.arrLeft {
+  img {
+    transform: rotate(90deg);
+  }
+}
+.arrRight {
+  img {
+    transform: rotate(-90deg);
+  }
+}
+
+.arrLeft,
+.arrRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  cursor: pointer;
+}
+
+.page,
+.activePage {
+  color: grey;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.activePage {
+  color: white;
+  background-color: $fillnout;
+}

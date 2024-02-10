@@ -1,0 +1,94 @@
+@import "../../components/styles/colors";
+
+.b2bOffers {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 37px 10px 0 10px;
+
+  .headWrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 50px;
+    padding: 10px 0;
+    background-color: $background;
+    z-index: 500;
+    @media screen and (min-width: 1439px) {
+      top: 0px;
+    }
+  }
+}
+
+.createOfferButton {
+  position: relative;
+  padding: 10px;
+  min-width: 300px;
+  border: $fillnout solid 1px;
+  border-radius: 8px;
+  background-color: #1caf8630;
+  font-size: 16px;
+  color: $white;
+  text-align: center;
+  cursor: pointer;
+  @media screen and (max-width: 719px) {
+    display: none;
+    min-width: unset;
+    flex: 1;
+    font-size: 14px;
+  }
+}
+
+.fiatBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fiat {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.wrap {
+  display: flex;
+  gap: 10px;
+  @media screen and (max-width: 719px) {
+    width: 100%;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  filter: blur(2px);
+}
+
+.banner {
+  // margin-top: 150px;
+  background: url("../../assets/img/bannerBg.png") center center no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  img {
+    display: none;
+    @media screen and (max-width: 719px) {
+      display: block;
+    }
+  }
+  div {
+    text-align: center;
+    color: $text;
+  }
+  .bannerTop {
+    font-weight: 600;
+  }
+  .bannerBottom {
+    font-size: 12px;
+  }
+}

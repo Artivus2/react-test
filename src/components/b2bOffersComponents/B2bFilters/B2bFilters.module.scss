@@ -1,0 +1,127 @@
+@import "../../styles/colors";
+
+.b2bFilters,
+.mobile,
+.desk {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: sticky;
+  top: 50px;
+  padding: 0 0 0px 0;
+  background-color: $background;
+  z-index: 500;
+  @media screen and (min-width: 1439px) {
+    top: 0px;
+  }
+
+  .sumWrapper {
+    display: flex;
+
+    border: $hideText solid 1px;
+    border-radius: 8px;
+    @media screen and (max-width: 719px) {
+      flex: 1;
+    }
+    > div:first-child {
+      width: 160px;
+      @media screen and (max-width: 719px) {
+        // width: 80%;
+      }
+
+      > * {
+        border: none;
+      }
+    }
+
+    > div:last-child {
+      margin-left: -15px;
+
+      > * {
+        border-top: unset;
+        border-right: unset;
+        border-bottom: unset;
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  filter: blur(2px);
+}
+
+.select1 {
+  color: $text !important;
+}
+
+.select2 {
+  background-color: $background !important;
+  border: 1px solid $hideText !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+  color: $text !important;
+  height: 40px !important;
+}
+
+.select3 {
+  width: 210px !important;
+  color: $text !important;
+  @media screen and (max-width: 719px) {
+    // width: 45% !important;
+    flex: 1;
+  }
+}
+
+.select4 {
+  color: white !important;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 1px solid $hideText !important;
+  border-radius: 8px !important;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text !important;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text !important;
+  border-bottom: 1px solid $hideText !important;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobileBox {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  @media screen and (max-width: 719px) {
+    display: flex;
+  }
+}
+
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 719px) {
+  .desk {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+}

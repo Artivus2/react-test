@@ -1,0 +1,184 @@
+@import "../../../styles/colors";
+
+.b2bCompanyCreator {
+  padding: 20px 20px 40px;
+  display: inline-block;
+  // width: 400px;
+  background-color: $background;
+  color: $white;
+  border: $fillnout solid 2px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 300;
+  overflow-y: auto;
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    padding-bottom: 60px;
+    // flex-direction: column;
+
+    input {
+      margin: 10px 5px 0 0;
+      @media screen and (max-width: 719px) {
+        margin: 5px 5px 0 0;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-top: 48px;
+      padding: 10px 48px;
+      align-self: center;
+      border-radius: 8px;
+    }
+  }
+}
+
+.poptop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 719px) {
+  .b2bCompanyCreator {
+    padding: 80px 20px 40px;
+    display: inline-block;
+    width: 100%;
+    background-color: $background;
+    color: $white;
+    border: $fillnout solid 1px;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    overflow-y: auto;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      .col1,
+      .col2 {
+        max-width: 442px;
+        h4 {
+          width: 100%;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+        input {
+          width: 45%;
+          @media screen and (max-width: 719px) {
+            width: 100% !important;
+          }
+        }
+      }
+
+      button {
+        margin-top: 48px;
+        padding: 10px 48px;
+        align-self: center;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.col1 {
+  max-width: 442px;
+}
+
+.col2 {
+  max-width: 221px;
+}
+
+.select3 {
+  margin: 10px 5px 0 0;
+  max-width: 216px;
+  @media screen and (max-width: 719px) {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+.select2 {
+  background-color: transparent !important;
+  border: 2px solid $fillnout !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select4 {
+  color: white !important;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 2px solid $fillnout !important;
+  border-radius: 8px !important;
+  box-sizing: border-box;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+  box-sizing: border-box;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+}

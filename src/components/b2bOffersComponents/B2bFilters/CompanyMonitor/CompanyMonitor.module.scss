@@ -1,0 +1,16 @@
+@import "../../../styles/colors";
+
+.companyMonitor {
+  padding: 10px;
+  // min-width: 370px;
+  white-space: nowrap;
+  border: $fillnout solid 1px;
+  border-radius: 8px;
+  background-color: #1caf8630;
+  font-size: 16px;
+  color: $white;
+  text-align: center;
+  @media screen and (max-width: 719px) {
+    flex: 1;
+  }
+}

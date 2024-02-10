@@ -1,0 +1,442 @@
+@import "../../components/styles/colors.scss";
+
+.filtersBlock {
+  // padding-top: 135px;
+  // @media screen and (max-width: 719px) {
+  position: sticky;
+  top: 50px;
+  padding: 0 0 0px 0;
+  background-color: $background;
+  z-index: 500;
+  @media screen and (min-width: 1439px) {
+    top: 0px;
+  }
+}
+
+@import "../styles/colors.scss";
+
+.main {
+}
+
+.smallFilters {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.bigFilters {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 23px 0;
+  align-items: center;
+}
+
+.summTextBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileBox {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  @media screen and (max-width: 719px) {
+    display: flex;
+  }
+}
+
+.summ {
+  position: relative;
+  &Text {
+    color: $lightViolet;
+  }
+  &Input {
+    width: 210px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid $hideText;
+    padding-left: 10px;
+    background-color: transparent;
+    color: $text;
+    outline: none;
+    &::placeholder {
+      color: $text;
+    }
+  }
+  &Сurrency {
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    color: $fillnout;
+  }
+}
+
+.filter {
+  height: 75px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tokenFilter {
+  position: relative;
+  width: 132px;
+  height: 38px;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.select2 {
+  background-color: $background !important;
+  border: 1px solid $hideText !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+}
+
+.menu {
+  background-color: $darkViolet;
+}
+
+.option:hover {
+  background-color: $fillnout;
+}
+
+.newOfferBtn {
+  p {
+    margin: 0;
+  }
+  height: 38px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  background-color: $fillnout;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  color: $text;
+  &:hover {
+    background-color: #ffffff00;
+    border: 1px solid $hideText;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  .plus {
+    margin-right: 10px;
+  }
+}
+
+.payment {
+}
+
+.btnBlock {
+  display: flex;
+  align-items: flex-end;
+}
+
+.miniFilters {
+  display: none;
+  @media (max-width: 1250px) {
+    display: flex;
+    gap: 10px;
+  }
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.select3 {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.select31 {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+}
+
+.select4 {
+  color: white !important;
+}
+
+.select5 {
+  background-color: transparent !important;
+  border: 1px solid #6522d9 !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  height: 39px !important;
+  &:hover {
+    border: 1px solid #6522d9 !important;
+  }
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 1px solid $hideText !important;
+  border-radius: 8px !important;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fiatBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    @media (max-width: 576px) {
+      display:none;
+    }
+  }
+  
+}
+
+.fiat {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.mainBtn {
+  color: $white;
+  background-color: $background;
+  max-height: 36px;
+  border-radius: 10px;
+  border: 1px solid $hideText;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  @media (max-width: 576px) {
+     max-width:155px;
+     width: 100%;
+     padding:5px;
+  }
+}
+
+.btnBuy {
+  padding: 8px 30px;
+   
+  p {
+    margin: 0;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  @media (max-width: 576px) {
+    border-radius: 5px;
+  }
+}
+
+.btnSell {
+  padding: 8px 30px;
+  p {
+    margin: 0;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buyActive {
+  background-color: $fillnout;
+  &:hover {
+    color: $white;
+    border: none;
+  }
+}
+
+.sellActive {
+  background-color: $fillnout;
+  &:hover {
+    color: $white;
+    border: none;
+  }
+}
+
+.errModalContainer {
+  position: fixed;
+  background-color: #0c204e;
+  border: 1px solid $hideText;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  right: 0;
+  top: 100px;
+  color: $text;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 999;
+}
+
+.marq {
+  background-color: $fillnout;
+  padding: 5px;
+  margin-top: 10px;
+  animation: animMarqueeRtl 5s linear;
+}
+
+@keyframes animMarqueeRtl {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  .errModalContainer {
+    border-radius: 0px;
+    top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .btnSell,
+  .btnBuy {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 14px;
+    // height: 36px;
+    width: 50%;
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
+  }
+  .mainBtn {
+    height: 36px;
+    flex: 1;
+  }
+
+  .btnBlock {
+    width: 45%;
+  }
+  .payment {
+    width: 100%;
+  }
+  .newOfferBtn {
+    font-size: 14px;
+    width: 100%;
+  }
+  .tokenFilter {
+    width: 40%;
+  }
+  .summ {
+    width: 55%;
+    // flex: 1;
+    &Input {
+      width: 100%;
+      box-sizing: border-box;
+      height: 38px;
+    }
+  }
+  .bigFilters {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .main {
+    width: 100%;
+  }
+  .btnBlock {
+    display: none;
+  }
+  .tokenFilter,
+  .payment,
+  .summ {
+    transition: all 0.5s linear;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .errModalContainer {
+    top: 50px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .btnSell,
+  .btnBuy {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 14px;
+    height: 36px;
+    width: 50%;
+  }
+  .mainBtn {
+    height: 36px;
+    flex: 1;
+  }
+
+  .btnBlock,
+  .payment {
+    width: 47%;
+  }
+  .newOfferBtn {
+    font-size: 14px;
+    width: 100%;
+  }
+  .tokenFilter {
+    // width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .summ {
+    width: 30%;
+    &Input {
+      width: 100%;
+      box-sizing: border-box;
+      height: 38px;
+    }
+  }
+  .bigFilters {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .main {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .errModalContainer {
+    top: 70px;
+  }
+
+  .newOfferBtn {
+    font-size: 12px;
+  }
+}

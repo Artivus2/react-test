@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.title {
+  font-size: 14px;
+  color: #ffffff70;
+}
+
+.value {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 16px 4px rgba(114, 184, 238, 0.2);
+}
+
+.timerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -45px 0 25px 0;
+}
+
+.number,
+.time,
+.timerContainer {
+  flex: 1;
+  text-align: center;
+  @media (max-width: 426px) {
+    margin-top: 20px;
+  }
+}
+
+.timerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  .type {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.timerBlock {
+  position: relative;
+}

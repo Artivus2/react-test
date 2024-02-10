@@ -1,0 +1,305 @@
+@import "../../components/styles/colors.scss";
+
+.back {
+  background: url("../../assets/img/bg.svg") 50% / cover no-repeat;
+  padding: 100px 0;
+  margin-top: -100px;
+}
+
+.bg {
+  // background: url("../../assets/img/bg.svg") 50% / cover no-repeat;
+  height: 300px;
+  width: 100%;
+  max-width: 2300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -70px;
+}
+
+.title {
+  color: $text;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.purchaseMainContainer {
+  margin-top: -130px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchaseContainer {
+  padding: 20px;
+  border: 2px solid $fillnout;
+  border-radius: 20px;
+  max-width: 588px;
+  margin: 0 auto;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectToken,
+.showRub {
+  border: 1px solid $fillnout;
+  border-radius: 6px;
+  max-width: 550px;
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.selectToken {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  font-size: 24px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $text;
+}
+
+.count::placeholder {
+  color: #ffffff;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  color: $fillnout;
+}
+
+.changeBox {
+  position: relative;
+  background-color: $backgroundModal;
+  color: $text;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dolVal {
+  font-size: 14px;
+  font-weight: 600;
+  color: $fillnout;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  img {
+    display: none;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.addCap {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: $fillnout;
+  border: 1px solid $fillnout;
+  color: $text;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.feeContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+.fee {
+  font-size: 18px;
+  font-weight: 600;
+}
+.feeInfo {
+  background: url("../../assets/icons/search-icon.svg") center center no-repeat;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+}
+
+.aboutFeeContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.aboutFee {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.curFee {
+  font-size: 18px;
+  font-weight: 600;
+  color: $fillnout;
+}
+
+.fiatBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  .fiat {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.select2 {
+  background-color: transparent !important;
+  border: 2px solid $fillnout !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+}
+
+.select4 {
+  color: white !important;
+}
+
+.select6 {
+  background-color: $background !important;
+  border: 2px solid $fillnout !important;
+  border-radius: 8px !important;
+}
+.select61 {
+  background-color: $background !important;
+  border-radius: 8px !important;
+  color: $text;
+  z-index: 200 !important;
+}
+
+.select7 {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  color: $text !important;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 24px;
+    margin-top: -80px;
+  }
+  .purchaseContainer {
+    max-width: unset;
+    width: 95%;
+  }
+
+  .selectToken,
+  .showRub {
+    max-width: unset;
+    width: 100%;
+  }
+  .countContainer {
+    max-width: unset;
+    width: 100%;
+  }
+  .changeBox {
+    font-size: 14px;
+    font-weight: 600;
+    width: max-content;
+  }
+  .count {
+    max-width: unset;
+    width: 100%;
+  }
+  .infoContainer {
+    max-width: unset;
+    width: 100%;
+  }
+  .precentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .changeBlock {
+    border-radius: 0px;
+    top: 0;
+    height: 100%;
+    max-width: unset;
+    width: 100%;
+  }
+  .categoryContainer {
+    row-gap: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 34px;
+    margin-top: -100px;
+  }
+  .changeBlock {
+    margin-top: 30px;
+    top: 0;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1443px) {
+  .title {
+    font-size: 34px;
+    margin-top: -100px;
+  }
+  .changeBlock {
+    margin-top: 30px;
+    top: 0;
+    height: 90%;
+  }
+}

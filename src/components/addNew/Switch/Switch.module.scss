@@ -1,0 +1,35 @@
+@import "../../styles/colors.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.btn {
+  width: 330px;
+  height: 30px;
+  border-radius: 6px;
+  color: $text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid $fillnout;
+    color: $fillnout;
+  }
+}
+
+.active {
+  background-color: $fillnout;
+  color: $white;
+  &:hover {
+    background-color: $fillnout;
+    color: $white;
+  }
+}

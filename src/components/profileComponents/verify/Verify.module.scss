@@ -1,0 +1,263 @@
+@import "../../styles/colors.scss";
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  color: $text;
+  margin: 0;
+}
+
+.top {
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  padding: 5px 10px;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px 0;
+  }
+}
+
+.verifyStatus {
+  max-width: max-content;
+  margin-top: 20px;
+}
+
+.helpText {
+  font-size: 18px;
+  font-weight: 600px;
+  color: $text;
+  margin-top: 60px;
+  @media (max-width: 1439px) {
+    border: 2px solid $fillnout;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+}
+
+.verifyBox {
+  background-color: $backgroundModal;
+  border: 2px solid $fillnout;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 20px 0;
+  }
+}
+
+.step0,
+.step1,
+.step2,
+.step3,
+.step4,
+.step5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.step0Img,
+.step1Img,
+.step2Img,
+.step3Img,
+.step4Img,
+.step5Img {
+  width: 190px;
+  height: 160px;
+}
+
+.step0Title,
+.step1Title,
+.step2Title,
+.step3Title,
+.step4Title,
+.step5Title {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $text;
+  text-align: center;
+  max-width: 550px;
+}
+
+.step4Title,
+.step4Text,
+.step5Title {
+  max-width: 100%;
+}
+
+.step1Title,
+.step2Title,
+.step3Title {
+  margin-top: 0;
+}
+
+.step0Text,
+.step1Text,
+.step2Text,
+.step3Text,
+.step4Text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: $text;
+  max-width: 550px;
+}
+
+.btnOk {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: $fillnout;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $fillnout;
+  }
+}
+
+.btnOkSmall {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: $fillnout;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(242, 234, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $fillnout;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.btnDis {
+  margin-top: 20px;
+  background-color: $backgroundModal;
+  color: $fillnout;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+}
+
+.step1,
+.step2,
+.step3,
+.step4,
+.step5 {
+  position: relative;
+}
+
+.step1Img,
+.step2Img,
+.step3Img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.step3Img {
+  margin-left: 10px;
+}
+
+.step1ImgSmall,
+.step2ImgSmall,
+.step3ImgSmall {
+  margin-top: 20px;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.formFileUpload {
+  margin: 30px 0;
+  height: 240px;
+  width: 612px;
+  max-width: 612px;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  color: $text;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.inputFileUpload {
+  display: none;
+}
+
+.labelFileUpload {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: $fillnout;
+  background-color: $backgroundModal;
+}
+
+.labelFileUpload.drag-active {
+  background-color: #ffffff;
+}
+
+.uploadButton {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 0.25rem;
+  border: none;
+  background-color: transparent;
+  color: $fillnout;
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+.dragFileElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}

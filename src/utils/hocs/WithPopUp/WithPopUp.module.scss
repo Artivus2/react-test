@@ -1,0 +1,78 @@
+@import "../../../components/styles/colors.scss";
+
+.disabledWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background-color: $bgmodal;
+
+  .popUp {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9001;
+
+    .closeButton {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &::before {
+        content: "✖";
+        font-weight: bold;
+        line-height: 1;
+        font-size: 20px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+@media screen and (max-width: 719px) {
+  .disabledWrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+
+    .popUp {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      transform: unset;
+      z-index: 9001;
+
+      .closeButton {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &::before {
+          content: "✖";
+          font-weight: bold;
+          line-height: 1;
+          font-size: 20px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import "../../styles/colors";
+
+.createOffer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  // style for switcher
+  > div:nth-child(2) {
+    align-self: flex-start;
+  }
+
+  height: max-content;
+  width: 780px;
+
+  background-color: $background;
+  border: 2px solid $fillnout;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 16px;
+  color: $white;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .chartBlock {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .customSelectWrapper {
+      width: 300px;
+    }
+  }
+
+  .button {
+    background-color: $fillnout;
+    border: 1px solid $fillnout;
+    border-radius: 8px;
+    height: 40px;
+    flex: 1;
+    color: white;
+    font-size: 18px;
+
+    &:disabled {
+      background-color: rgba(27, 48, 66, 0.097);
+    }
+
+    &:hover {
+      border: 1px solid #02309f;
+      cursor: pointer;
+    }
+  }
+  .cancelButton {
+    background-color: $background;
+    border: 0px solid $fillnout;
+    flex: 1;
+    &:hover {
+      border: 1px solid #02309f;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    width: 45%;
+  }
+
+  input {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background-color: $background;
+    border: 1px solid $fillnout;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    outline: $fillnout;
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    input {
+      // width: 50%;
+      padding: 5px 10px;
+      flex: 1;
+    }
+  }
+
+  .limitContainer {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+    }
+  }
+}
+
+.courseWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+@media screen and (max-width: 719px) {
+  .createOffer {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+  }
+}

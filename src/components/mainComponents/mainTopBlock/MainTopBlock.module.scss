@@ -1,0 +1,186 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+
+.main {
+  background: $background;
+}
+
+.bg {
+  background: url("../../../assets/img/bg.svg") 50% / cover no-repeat;
+
+  > div {
+    position: relative;
+    height: 474px;
+
+    @media screen and (max-width: 1279px) {
+      height: 600px;
+    }
+  }
+
+  .logoBlock {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+
+    .logoText {
+      font-family: "Playfair Display", serif;
+      font-size: 120px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 120%;
+      color: $text;
+      margin-bottom: -20px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      span {
+        color: #23af91;
+      }
+    }
+
+    @media screen and (max-width: 719px) {
+      right: unset;
+    }
+
+    @media screen and (max-width: 1919px) {
+      .logoText {
+        font-size: 96px;
+        margin-bottom: -15px;
+      }
+    }
+
+    @media screen and (max-width: 1279px) {
+      .logoText {
+        font-size: 60px;
+        margin-bottom: -10px;
+      }
+    }
+  }
+
+  .textBlock {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-40px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1919px) {
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
+
+    @media screen and (max-width: 1279px) {
+      transform: translate(-50%, 0);
+    }
+
+    .title {
+      width: 900px;
+
+      background: linear-gradient(90deg, rgba(228, 193, 100, 1), rgba(180, 127, 45, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      color: $mainText;
+      font-size: $regSize;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media screen and (max-width: 1279px) {
+        width: 100%;
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 719px) {
+        font-size: 15px;
+      }
+    }
+
+    .textBtnBlock {
+      margin-top: 17px;
+
+      display: flex;
+      align-items: center;
+      gap: 55px;
+
+      @media screen and (max-width: 1279px) {
+        margin-top: 32px;
+      }
+      @media screen and (max-width: 719px) {
+        gap: 10px;
+      }
+
+      .tradeBtn {
+        padding: 20px;
+        border: 1px solid $fillnout;
+        border-radius: 15px;
+        background-color: $background;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .tradeText {
+          font-size: $regSize;
+          color: $text;
+          @media screen and (max-width: 719px) {
+            font-size: 18px;
+          }
+        }
+
+        .tradeArr {
+          background: url("../../../assets/icons/tradeArr.svg") no-repeat center right;
+          width: 77px;
+          height: 13px;
+          margin-bottom: -6px;
+        }
+
+        transition: all 0.2s linear;
+        cursor: pointer;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .telegramBtn {
+        width: 136px;
+        height: 83px;
+        padding: 20px;
+        border: 1px solid $fillnout;
+        border-radius: 15px;
+        background-image: url("../../../assets/icons/tradeTelegram.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $background;
+
+        cursor: pointer;
+        @media screen and (max-width: 719px) {
+          width: 80px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+.promotion {
+  width: 100%;
+  color: $text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  background-color: $fillnout;
+  font-size: $qSize;
+
+  .promotionText {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1279px) {
+    font-size: 14px;
+  }
+}

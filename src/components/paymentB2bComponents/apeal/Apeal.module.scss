@@ -1,0 +1,50 @@
+@import "../../styles/colors.scss";
+
+.content {
+  background-color: $bgmodal;
+  border-radius: 6px;
+}
+
+.title {
+  color: $text;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.doc {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--stroke, $fillnout);
+}
+
+.head {
+  background-color: $bgmodal;
+  border: 2px solid $fillnout;
+  padding: 10px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $text;
+}
+
+.main {
+  padding: 10px;
+}
+
+.first,
+.second,
+.third {
+  .subTitle {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  font-size: 18px;
+  font-weight: 400;
+  color: $text;
+  margin-bottom: 10px;
+}

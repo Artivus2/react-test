@@ -1,0 +1,252 @@
+@import "../../../../styles/colors.scss";
+
+.first {
+  display: flex;
+  flex-direction: column;
+}
+
+.warning {
+  border-radius: 4px;
+  border: 1px solid #f59b13;
+  background: #f59b1310;
+  padding: 6px;
+}
+
+.warningText {
+  color: #f59b13;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.comment {
+  width: 100%;
+  margin-top: 10px;
+  color: $text;
+}
+
+.creatorText {
+  color: $text;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.ava {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid $fillnout;
+}
+
+.userinfo {
+  font-size: 16px;
+  color: $fillnout;
+  margin-right: 20px !important;
+  font-weight: 600;
+  @media (max-width: 767px) {
+    font-size: 10px;
+    text-align: start;
+  }
+}
+
+.username {
+  color: $text;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.noInfo {
+  color: $fillnout;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btnOk,
+.btnDis {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid $fillnout;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btnOk {
+  color: $text;
+  background-color: $fillnout;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btnDis {
+  color: #ffffff60;
+  background-color: #2666ff20;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.rateBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate {
+  max-width: 354px;
+  min-width: max-content;
+  min-height: 60px;
+  max-height: 100px;
+  border: 2px solid $fillnout;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0 10px 0;
+  outline: none;
+  color: $text;
+  font-weight: 600;
+  font-size: 16px;
+  &::placeholder {
+    color: #ffffff60;
+  }
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: blue #2666ff10;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2666ff10;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fillnout;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+}
+
+.error {
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.comments {
+  max-height: 300px;
+  overflow-y: auto;
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: blue #2666ff10;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2666ff10;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fillnout;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+}
+
+.commentBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 10px;
+  h5 {
+    color: #ffffff60;
+    margin: 0;
+    font-weight: 500;
+    flex: 1;
+  }
+  p {
+    color: $text;
+    flex: 1;
+    text-align: end;
+    span {
+      color: #ffffff60;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: $fillnout;
+  margin: 10px 0;
+}
+
+.totalInfo {
+  padding: 5px 0;
+  margin-bottom: 10px;
+  color: $text;
+  background-color: $backgroundModal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.stars {
+  margin: 10px 0;
+}
+
+.star {
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 719px) {
+  .rate {
+    max-width: 300px;
+    min-width: 200px;
+  }
+}

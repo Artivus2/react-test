@@ -1,0 +1,31 @@
+@import "../../../components/styles/colors";
+
+$size: 29px;
+
+.optionValue {
+  color: $text;
+  font-size: 16px;
+  line-height: 1;
+
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  cursor: pointer;
+
+  img {
+    width: $size;
+    height: $size;
+  }
+
+  span {
+    height: $size;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+}
+
+.selected {
+  color: $fillnout;
+}

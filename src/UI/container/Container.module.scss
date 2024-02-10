@@ -1,0 +1,19 @@
+@import "../../components/styles/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+.main {
+  max-width: 1780px;
+  margin: 0 auto;
+  
+  @media screen and (max-width: 1919px){
+    max-width: 1180px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    max-width: 660px;
+  }
+
+  @media screen and (max-width: 719px) {
+    max-width: 500px;
+  }
+}

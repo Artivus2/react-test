@@ -1,0 +1,81 @@
+@import "../../../components/styles/colors.scss";
+
+.root {
+  width: 100%;
+  border: 2px solid $fillnout;
+  background-color: $backgroundModal;
+  border-radius: 8px;
+  padding: 10px 5px 15px 10px;
+  box-sizing: border-box;
+  @media (max-width: 426px) {
+    min-width: 300px;
+  }
+  @media (max-width: 1439px) {
+    border: none;
+    padding: 10px;
+  }
+}
+
+.title {
+  color: $text;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 53px;
+}
+
+.p2pBlock,
+.b2bBlock {
+  h2 {
+    color: $fillnout;
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-bottom: 44px;
+
+  &Item {
+    color: $text;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+
+    @media (max-width: 719px) {
+      font-size: 10px;
+    }
+
+    &Active {
+      color: $fillnout;
+      border-bottom: 1px solid $fillnout;
+    }
+  }
+
+  &Left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 719px) {
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &Right {
+    span {
+      cursor: pointer;
+      color: $text;
+      font-size: 16px;
+      font-weight: 400;
+      display: none;
+    }
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+}

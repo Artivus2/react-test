@@ -1,0 +1,183 @@
+@import "../styles/colors.scss";
+
+.mainContainer {
+  position: relative;
+  z-index: 100;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 10px 0;
+
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  // width: 750px;
+  margin: 0;
+  &Item {
+    a {
+      text-decoration: none;
+      p {
+        margin: 0;
+        color: #ffffff;
+      }
+    }
+    p {
+      margin: 0;
+      color: #ffffff;
+    }
+    .navLink {
+      text-decoration: none;
+      color: #ffffff;
+      &:hover {
+        color: $backgroundModal;
+      }
+    }
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    &:hover {
+      color: $backgroundModal;
+    }
+    &Arrow {
+      margin-left: 8px;
+    }
+  }
+}
+
+.newBlock {
+  width: 26px;
+  height: 17px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $green;
+  color: $green;
+  font-size: 8px;
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  z-index: 2;
+}
+
+.newItem {
+  position: relative;
+}
+
+.loginBtn {
+  color: #ffffff;
+  padding: 10px;
+  background-color: $backgroundModal;
+  border: 1px solid $fillnout;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffffff00;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.regBtn {
+  padding: 10px;
+  color: #ffffff;
+  background-color: $backgroundModal;
+  border: 1px solid $fillnout;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffffff00;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.profileBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.openOffers {
+  min-width: 20px;
+  min-height: 10px;
+  background-color: $green;
+  border-radius: 100%;
+  padding: 3px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+}
+
+.marqBlock {
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 65px;
+  }
+}
+
+.marqItemContainer {
+  font-size: 18px;
+  font-weight: 600;
+  color: $lightPurpuleText;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 20px;
+}
+.name {
+  margin-right: 5px;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.nomarq {
+  @media screen and (max-width: 1439px) {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .nav {
+    gap: 10px;
+  }
+}

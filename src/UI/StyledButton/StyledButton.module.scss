@@ -1,0 +1,15 @@
+@import "../../components/styles/colors.scss";
+
+.styledButton {
+  border: none;
+
+  background-color: $fillnout;
+  color: rgba(255, 255, 255, 0.8);
+
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: default;
+}

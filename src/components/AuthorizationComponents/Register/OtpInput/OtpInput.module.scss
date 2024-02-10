@@ -1,0 +1,35 @@
+@import "../../../styles/colors.scss";
+
+.otpGroup {
+  display: flex;
+  width: 100%;
+  max-width: 360px;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+.otpInput {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-bottom: 1px solid $fillnout;
+  background-color: $backgroundModal;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  color: $text;
+  outline: none;
+}
+
+.error {
+  margin-top: 20px;
+  color: rgba(211, 65, 118, 1);
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  text-align: center;
+}

@@ -1,0 +1,72 @@
+.pointOption {
+  padding: 0 30px 30px 30px;
+  position: relative;
+
+  .text {
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    line-height: 138%;
+    letter-spacing: 0.03em;
+  }
+
+  .point {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-image: linear-gradient(rgba(228, 193, 100, 1), rgba(180, 127, 45, 1));
+    -webkit-box-shadow: 0 4px 18px 6px rgba(228, 193, 100, 0.25);
+    -moz-box-shadow: 0 4px 18px 6px rgba(228, 193, 100, 0.25);
+    box-shadow: 0 4px 18px 6px rgba(228, 193, 100, 0.25);
+  }
+
+  @media screen and (max-width: 1279px){
+    padding: 0 15px 0 0;
+
+    .text {
+      font-size: 15px;
+      text-align: right;
+    }
+
+    .point {
+      width: 5px;
+      height: 5px;
+      left: unset;
+      bottom: unset;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}
+
+.rightPoint {
+  .text {
+    text-align: right;
+  }
+
+  .point {
+    left: unset;
+    right: 0;
+  }
+
+  @media screen and (max-width: 1279px){
+    padding: 0 0 0 15px;
+
+    .text {
+      text-align: left;
+    }
+
+    .point {
+      right: unset;
+      left: 0;
+    }
+  }
+}
